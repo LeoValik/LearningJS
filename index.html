@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Расчёт ставок</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <form action="#" method="post">
+        <span>
+            <label for="rate">Ставка:</label><br>
+            <input type="number" id="rate" name="rate"/>
+        </span>
+
+
+        <br>
+        <span>
+            <label for="sold">Коеф. умножения:</label><br>
+            <input type="number" id="sold" name="sold"/>
+        </span>
+
+
+        <br>
+        <span>
+            <label for="profit">Коеф. увеличения ставки:</label><br>
+            <input type="number" id="profit" name="profit"/>
+        </span>
+
+
+        <br>
+        <span>
+            <label for="change">Менять через каждый ход:</label><br>
+            <input type="number" id="change" name="change"/>
+        </span>
+
+
+        <br>
+        <br>
+        <input type="button" id="calc" value="Рассчитать"><!-- </button> -->
+    </form>
+
+    <br>
+    <table id="result" border="1">
+        <!--<tr>
+          <th>Ставка</th>
+          <th>Потрачено</th>
+          <th>Умножение</th>
+          <th>Профит</th>
+        </tr>
+        <tr>
+          <td>0,00000001</td>
+          <td>0,00000001</td>
+          <td>0,00000099</td>
+          <td>0,00000098</td>
+        </tr>
+        <tr>
+          <td>0,00000001</td>
+          <td>0,00000002</td>
+          <td>0,00000099</td>
+          <td>0,00000097</td>
+        </tr>-->
+      </table>
+<script src="js/index.js"></script>
+</body>
+</html>

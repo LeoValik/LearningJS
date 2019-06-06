@@ -1,0 +1,30 @@
+body {
+    font-size: 18px;
+}
+
+#result {
+    width: 100%;
+    text-align: center;
+}
+
+th {
+    font-size: 24px;
+}
+
+#calc {
+    width: 20%;
+    height: 20%;
+    font-size: 18px;
+}
+
+form {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+span {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
