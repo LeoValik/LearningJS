@@ -17,7 +17,7 @@ function getResult() {
     let data = [];
 
     // Вставка данных в файл 
-    data.push(" Ставка | Потрачено | Умножение | Профит\r\n");
+    data.push("№ | Ставка | Потрачено | Умножение | Профит\r\n");
 
     // Стили для таблицы
     document.write(`
@@ -36,7 +36,13 @@ function getResult() {
             text-align: center;
             display: block;
             text-decoration: none;
+            color: #000;
+            font-weight: 700;
         }
+        body {
+            background: #c7b39b url(images/bg.jpg); /* Цвет фона и путь к файлу */
+            color: #000; /* Цвет текста */
+           }
     </style>
     `);
 
@@ -47,6 +53,7 @@ function getResult() {
     document.write(`
     <thead>
     <tr>
+        <th>№</th>
         <th>Ставка</th>
         <th>Потрачено</th>
         <th>Умножение</th>
@@ -55,10 +62,13 @@ function getResult() {
     </thead>
     `);
     document.write('<tbody id="resultjs">');
+    index = 1;
     // Логика всего проекта
-    while (i <= 20) {
+    while (i <= 1000) {
+
         if(i) {
-            rate += Number(rate);
+            // rate += Number(rate);
+            rate = Number(rate) * Number(profit);
         }
             for(let j = 0; j < change; j++) {
             // 2 столбец
@@ -71,6 +81,7 @@ function getResult() {
             // Вывод таблицы
             document.write(`
             <tr>
+                <td>${index++}</td>
                 <td>${rate.toFixed(8)}</td>
                 <td>${sum.toFixed(8)}</td>
                 <td>${umnog.toFixed(8)}</td>
@@ -78,9 +89,12 @@ function getResult() {
             </tr>               
             `);
             // Вывод в файл
-            data.push(`${rate.toFixed(8)} | ${sum.toFixed(8)} | ${umnog.toFixed(8)} | ${ourProfit.toFixed(8)}\r\n`);
+            data.push(`${index} | ${rate.toFixed(8)} | ${sum.toFixed(8)} | ${umnog.toFixed(8)} | ${ourProfit.toFixed(8)}\r\n`);
         }
-
+        if ( ((i * Number(change)) + Number(change)) == 1000 ) {
+            break;
+        }
+        //console.log(i * Number(change));
         i++;
     }
     document.write("</table>")
