@@ -10,15 +10,36 @@ function getResult() {
     // console.log(sold);
     // console.log(profit);
     // console.log(change);
+    let i = 0;
+    while (i <= 1000) {
 
-    document.getElementById('result').innerHTML = `
+        // 2 столбец
+        let sum = 0;
+        sum += Number(rate);
+
+        // 3 столбец
+        let umnog = rate * sold;
+
+        // 4 столбец
+        let ourProfit = umnog - sum;
+
+
+
+        
+
+
+    document.getElementById('resultjs').innerHTML = `
     <tr>
-        <th>Ставка</th>
-        <th>Потрачено</th>
-        <th>Умножение</th>
-        <th>Профит</th>
+        <td>${rate}</td>
+        <td>${sum.toFixed(8)}</td>
+        <td>${umnog.toFixed(8)}</td>
+        <td>${ourProfit.toFixed(8)}</td>
     </tr>
     `;
+    i++;
+    }
+
+
 }
 
 result.onclick = getResult;
